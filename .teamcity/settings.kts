@@ -26,33 +26,14 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 
 version = "2022.04"
 
-project {
-
-    vcsRoot(HomeTestTiki)
-
-    buildType(BuildDocker)
-}
-
-object BuildDocker : BuildType({
-    name = "Build Docker"
-
-    vcs {
-        root(HomeTestTiki)
-    }
+object EchoHelloWorld : BuildType ({
+    id("HelloWorld")
+    name = "Hello world"
 
     steps {
         script {
-            name = "Build Docker image"
-            scriptContent = """
-                pwd
-                ls -la
-            """.trimIndent()
+            scriptContent = "echo 'Hello world!'"
         }
     }
 })
-
-object HomeTestTiki : GitVcsRoot({
-    name = "home-test-tiki"
-    url = "https://github.com/mrnim94/home-test-tiki.git"
-    branch = "master"
-})
+  
