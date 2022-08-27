@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <name>Nimtechnology_MarketPlace Config DSL Script</name>
-  <groupId>Nimtechnology_MarketPlace</groupId>
-  <artifactId>Nimtechnology_MarketPlace_dsl</artifactId>
+  <name>Nimtechnology Config DSL Script</name>
+  <groupId>Nimtechnology</groupId>
+  <artifactId>Nimtechnology_dsl</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <parent>
