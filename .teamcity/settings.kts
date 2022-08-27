@@ -25,4 +25,10 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2022.04"
 
 project {
+
+    buildType(BuildImage)
 }
+
+object BuildImage : BuildType({
+    name = "Build image"
+})
