@@ -1,4 +1,4 @@
-import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.*
 
 version = "2020.1"
 project(_self.HelloWorldProject)
