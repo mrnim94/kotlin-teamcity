@@ -1,7 +1,7 @@
 package _self.buildTypes
 
-import jetbrains.buildServer.configs.kotlin.v2019_2.*
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
 object EchoHelloWorld : BuildType ({
     id("HelloWorld")
