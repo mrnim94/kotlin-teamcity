@@ -1,5 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
 
-version = "2020.1"
+version = "2022.04"
 project(_self.HelloWorldProject)
   
