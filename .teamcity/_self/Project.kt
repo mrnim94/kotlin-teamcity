@@ -1,4 +1,4 @@
-package _self
+package _Self
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.Project
