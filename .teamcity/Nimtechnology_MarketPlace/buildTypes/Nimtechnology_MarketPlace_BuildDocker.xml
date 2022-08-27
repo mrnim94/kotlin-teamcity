@@ -4,7 +4,16 @@
   <description />
   <settings>
     <parameters />
-    <build-runners />
+    <build-runners>
+      <runner id="RUNNER_7" name="Build Docker image" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[pwd
+ls -la]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="Nimtechnology_MarketPlace_HomeTestTiki" />
     </vcs-settings>
