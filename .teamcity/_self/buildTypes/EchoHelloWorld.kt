@@ -7,11 +7,17 @@ object EchoHelloWorld : BuildType ({
     id("HelloWorld")
     name = "Hello world"
 
+    vcs {
+        root(HelloWorldProject_HomeTestTiki, "+:. => ./home-test-tiki")
+    }
+
     steps {
         script {
             scriptContent = """
                 echo 'Hello world!'
                 docker -v
+                ls -la
+                pwd
             """.trimIndent()
         }
     }
