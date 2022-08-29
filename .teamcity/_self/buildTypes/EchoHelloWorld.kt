@@ -9,7 +9,10 @@ object EchoHelloWorld : BuildType ({
 
     steps {
         script {
-            scriptContent = "echo 'Hello world!'"
+            scriptContent = """
+                echo 'Hello world!'
+                docker -v
+            """.trimIndent()
         }
     }
 })
