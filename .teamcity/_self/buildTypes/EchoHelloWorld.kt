@@ -7,10 +7,6 @@ object EchoHelloWorld : BuildType ({
     id("HelloWorld")
     name = "Hello world"
 
-    vcs {
-        root(HelloWorldProject_HomeTestTiki, "+:. => ./home-test-tiki")
-    }
-
     steps {
         script {
             scriptContent = """
