@@ -1,9 +1,9 @@
 package _self
 
-import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.Project
 
 object HelloWorldProject : Project({
     name = "Hello Project"
     buildType(_self.buildTypes.EchoHelloWorld)
+    vcsRoot(_self.vcsRoots.HomeTestTiki)
 })
