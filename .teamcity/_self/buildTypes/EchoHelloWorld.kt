@@ -19,6 +19,7 @@ object EchoHelloWorld : BuildType ({
                 docker -v
                 ls -la
                 pwd
+                echo 'Done'
             """.trimIndent()
         }
     }
