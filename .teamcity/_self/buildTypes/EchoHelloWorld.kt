@@ -12,6 +12,7 @@ object EchoHelloWorld : BuildType ({
     params {
         param("workload", "all")
     }
+    val stringVariables : String = "%workload%"
 
     vcs {
         root(HomeTestTiki, "+:. => ./home-test-tiki")
@@ -19,14 +20,16 @@ object EchoHelloWorld : BuildType ({
     }
 
     steps {
-        script {
-            scriptContent = """
+        if (stringVariables == "all"){
+            script {
+                scriptContent = """
                 echo 'Hello world!'
                 docker -v
                 ls -la
                 pwd
                 echo 'Done'
             """.trimIndent()
+            }
         }
     }
 })
