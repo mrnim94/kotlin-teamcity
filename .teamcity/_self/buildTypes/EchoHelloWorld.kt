@@ -9,6 +9,10 @@ object EchoHelloWorld : BuildType ({
     id("HelloWorld")
     name = "Hello world"
 
+    params {
+        param("workload", "all")
+    }
+
     vcs {
         root(HomeTestTiki, "+:. => ./home-test-tiki")
         root(DockerDemo, "+:. => ./docker-demo")
