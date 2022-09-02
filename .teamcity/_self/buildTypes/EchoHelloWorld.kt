@@ -11,7 +11,7 @@ object EchoHelloWorld : BuildType ({
 
     vcs {
         root(HomeTestTiki, "+:. => ./home-test-tiki")
-        root(DockerDemo, "+:. => ./home-test-tiki")
+        root(DockerDemo, "+:. => ./docker-demo")
     }
 
     steps {
