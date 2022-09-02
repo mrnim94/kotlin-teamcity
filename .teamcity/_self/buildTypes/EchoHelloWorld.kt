@@ -22,6 +22,7 @@ object EchoHelloWorld : BuildType ({
         script {
             conditions {
                 equals("workload", "all")
+                equals("workload", "thang")
             }
             scriptContent = """
                 echo 'Hello world!'
