@@ -7,3 +7,10 @@ object HomeTestTiki : GitVcsRoot({
     url = "https://github.com/mrnim94/home-test-tiki"
     branch = "master"
 })
+
+object DockerDemo : GitVcsRoot({
+    name = "docker-demo"
+    url = "https://github.com/mrnim94/docker-demo"
+    branch = "master"
+    branchSpec = "+:refs/heads/*"
+})

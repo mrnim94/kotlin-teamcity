@@ -1,5 +1,6 @@
 package _self.buildTypes
 
+import _self.vcsRoots.DockerDemo
 import _self.vcsRoots.HomeTestTiki
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
@@ -10,6 +11,7 @@ object EchoHelloWorld : BuildType ({
 
     vcs {
         root(HomeTestTiki, "+:. => ./home-test-tiki")
+        root(DockerDemo, "+:. => ./home-test-tiki")
     }
 
     steps {

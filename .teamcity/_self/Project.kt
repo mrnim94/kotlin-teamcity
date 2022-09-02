@@ -6,4 +6,5 @@ object HelloWorldProject : Project({
     name = "Hello Project"
     buildType(_self.buildTypes.EchoHelloWorld)
     vcsRoot(_self.vcsRoots.HomeTestTiki)
+    vcsRoot(_self.vcsRoots.DockerDemo)
 })
