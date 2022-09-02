@@ -20,6 +20,9 @@ object EchoHelloWorld : BuildType ({
 
     steps {
         script {
+            conditions {
+                equals("workload", "all")
+            }
             scriptContent = """
                 echo 'Hello world!'
                 docker -v
