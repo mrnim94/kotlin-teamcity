@@ -21,7 +21,6 @@ object EchoHelloWorld : BuildType ({
     steps {
         script {
             conditions {
-                equals("workload", "all")
                 equals("workload", "thang")
             }
             scriptContent = """
