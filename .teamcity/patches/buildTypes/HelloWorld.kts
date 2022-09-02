@@ -10,6 +10,6 @@ accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("HelloWorld")) {
     vcs {
-        add(RelativeId("HelloWorldProject_DockerDe"))
+        add(RelativeId("HelloWorldProject_DockerDe"), "+:. => ./docker-demo")
     }
 }
