@@ -2,6 +2,7 @@ package _self.buildTypes
 
 import _self.vcsRoots.DockerDemo
 import _self.vcsRoots.HomeTestTiki
+import _self.vcsRoots.KotlinTeamcity
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
@@ -16,6 +17,7 @@ object EchoHelloWorld : BuildType ({
     vcs {
         root(HomeTestTiki, "+:. => ./home-test-tiki")
         root(DockerDemo, "+:. => ./docker-demo")
+        root(KotlinTeamcity, "+:. => ./kotlin-teamcity")
     }
 
     steps {
@@ -28,7 +30,8 @@ object EchoHelloWorld : BuildType ({
                 docker -v
                 ls -la
                 pwd
-                echo 'Done'
+                echo 'Run python script'
+                python main.py
             """.trimIndent()
         }
     }
