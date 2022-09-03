@@ -1,6 +1,7 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.ScriptBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.ui.*
@@ -25,6 +26,18 @@ changeBuildType(RelativeId("HelloWorld")) {
         }
     }
     steps {
+        update<ScriptBuildStep>(0) {
+            clearConditions()
+            scriptContent = """
+                echo 'Hello world!'
+                docker -v
+                ls -la
+                pwd
+                echo 'Run python script'
+                #bash ./kotlin-teamcity/resources/bash-script/install_python3.sh
+                python3 ./kotlin-teamcity/main.py
+            """.trimIndent()
+        }
         insert(1) {
             python {
                 name = "Run Python3 Script"
