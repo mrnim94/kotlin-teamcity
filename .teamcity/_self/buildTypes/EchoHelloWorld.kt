@@ -17,7 +17,7 @@ object EchoHelloWorld : BuildType ({
     vcs {
         root(HomeTestTiki, "+:. => ./home-test-tiki")
         root(DockerDemo, "+:. => ./docker-demo")
-        root(KotlinTeamcity, "+:. => ./kotlin-teamcity")
+        root(DslContext.settingsRoot, "kotlin-teamcity")
     }
 
     steps {
@@ -31,7 +31,7 @@ object EchoHelloWorld : BuildType ({
                 ls -la
                 pwd
                 echo 'Run python script'
-                python main.py
+                python ./kotlin-teamcity/main.py
             """.trimIndent()
         }
     }

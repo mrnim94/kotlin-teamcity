@@ -14,10 +14,3 @@ object DockerDemo : GitVcsRoot({
     branch = "master"
     branchSpec = "+:refs/heads/*"
 })
-
-object KotlinTeamcity : GitVcsRoot({
-    name = "docker-demo"
-    url = "https://github.com/mrnim94/kotlin-teamcity"
-    branch = "master"
-    branchSpec = "+:refs/heads/*"
-})
