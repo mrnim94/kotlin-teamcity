@@ -31,7 +31,7 @@ object EchoHelloWorld : BuildType ({
                 pwd
                 echo 'Run python script'
                 bash ./kotlin-teamcity/resources/bash-script/install_python3.sh
-                python ./kotlin-teamcity/main.py
+                python3 ./kotlin-teamcity/main.py
             """.trimIndent()
         }
     }
