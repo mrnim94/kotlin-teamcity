@@ -10,6 +10,6 @@ accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("HelloWorld")) {
     vcs {
-        add(DslContext.settingsRoot.id!!)
+        add(DslContext.settingsRoot.id!!, "kotlin-teamcity")
     }
 }
