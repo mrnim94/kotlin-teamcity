@@ -4,6 +4,7 @@ import _self.vcsRoots.DockerDemo
 import _self.vcsRoots.HomeTestTiki
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.buildSteps.python
 
 object EchoHelloWorld : BuildType ({
     id("HelloWorld")
@@ -27,9 +28,15 @@ object EchoHelloWorld : BuildType ({
                 ls -la
                 pwd
                 echo 'Run python script'
-                bash ./kotlin-teamcity/resources/bash-script/install_python3.sh
+                #bash ./kotlin-teamcity/resources/bash-script/install_python3.sh
                 python3 ./kotlin-teamcity/main.py
             """.trimIndent()
+        }
+        python {
+            name = "Run Python3 Script"
+            command = file {
+                filename = "kotlin-teamcity/main.py"
+            }
         }
     }
 })
