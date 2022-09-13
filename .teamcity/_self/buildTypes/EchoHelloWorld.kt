@@ -12,6 +12,7 @@ object EchoHelloWorld : BuildType ({
 
     params {
         param("workload", "all")
+        param("parameter-nim", "ahihi")
     }
 
     vcs {
@@ -30,6 +31,7 @@ object EchoHelloWorld : BuildType ({
                 echo 'Run python script'
                 #bash ./kotlin-teamcity/resources/bash-script/install_python3.sh
                 python3 ./kotlin-teamcity/main.py
+                bash ./home-test-tiki/parameter-tc.sh
             """.trimIndent()
         }
         python {
