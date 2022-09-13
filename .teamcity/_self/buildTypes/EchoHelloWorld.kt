@@ -32,6 +32,7 @@ object EchoHelloWorld : BuildType ({
                 #bash ./kotlin-teamcity/resources/bash-script/install_python3.sh
                 python3 ./kotlin-teamcity/main.py
                 bash ./home-test-tiki/parameter-tc.sh
+                echo %parameter-nim%
             """.trimIndent()
         }
         python {
