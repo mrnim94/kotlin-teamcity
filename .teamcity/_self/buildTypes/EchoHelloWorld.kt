@@ -13,6 +13,7 @@ object EchoHelloWorld : BuildType ({
     params {
         param("workload", "all")
         param("parameter-nim", "ahihi")
+        param("env.parameter-nim-env", "ahihi")
     }
 
     vcs {
