@@ -39,6 +39,19 @@ changeBuildType(RelativeId("HelloWorld")) {
         update<ScriptBuildStep>(0) {
             enabled = false
             clearConditions()
+            scriptContent = """
+                echo 'Hello world!'
+                docker -v
+                
+                docker pull docker pull docker.nimtechnology.com/nim/gusaul/grpcox:latest
+                ls -la
+                pwd
+                echo 'Run python script'
+                #bash ./kotlin-teamcity/resources/bash-script/install_python3.sh
+                python3 ./kotlin-teamcity/main.py
+                bash ./home-test-tiki/parameter-tc.sh
+                echo %parameter-nim%
+            """.trimIndent()
         }
         update<PythonBuildStep>(1) {
             enabled = false
