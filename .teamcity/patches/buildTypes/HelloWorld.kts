@@ -47,11 +47,10 @@ changeBuildType(RelativeId("HelloWorld")) {
         insert(2) {
             script {
                 name = "Run command inside Docker container"
-                scriptContent = "whoiam"
+                scriptContent = "pwd"
                 dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
                 dockerPull = true
                 dockerImage = "docker pull docker.nimtechnology.com/nim/gusaul/grpcox:latest"
-                dockerRunParameters = "--rm"
             }
         }
     }
