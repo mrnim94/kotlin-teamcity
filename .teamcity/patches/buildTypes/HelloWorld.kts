@@ -37,6 +37,7 @@ changeBuildType(RelativeId("HelloWorld")) {
     }
     steps {
         update<ScriptBuildStep>(0) {
+            enabled = false
             clearConditions()
             scriptContent = """
                 echo 'Hello world!'
