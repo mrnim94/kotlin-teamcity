@@ -63,7 +63,7 @@ changeBuildType(RelativeId("HelloWorld")) {
                 scriptContent = "pwd"
                 dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
                 dockerPull = true
-                dockerImage = "docker pull docker.nimtechnology.com/nim/gusaul/grpcox:latest"
+                dockerImage = "docker.nimtechnology.com/nim/gusaul/grpcox:latest"
             }
         }
     }
