@@ -36,6 +36,10 @@ changeBuildType(RelativeId("HelloWorld")) {
         }
     }
     steps {
+        update<ScriptBuildStep>(0) {
+            enabled = false
+            clearConditions()
+        }
         update<PythonBuildStep>(1) {
             enabled = false
             clearConditions()
