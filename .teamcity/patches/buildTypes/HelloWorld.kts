@@ -60,7 +60,7 @@ changeBuildType(RelativeId("HelloWorld")) {
         insert(2) {
             script {
                 name = "Run command inside Docker container"
-                scriptContent = "pwd"
+                scriptContent = "ls -la"
                 dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
                 dockerPull = true
                 dockerImage = "docker.nimtechnology.com/nim/gusaul/grpcox:latest"
