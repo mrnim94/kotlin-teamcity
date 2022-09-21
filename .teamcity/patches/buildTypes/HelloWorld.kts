@@ -2,6 +2,7 @@ package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.dockerSupport
+import jetbrains.buildServer.configs.kotlin.buildSteps.PythonBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.ScriptBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
@@ -35,6 +36,10 @@ changeBuildType(RelativeId("HelloWorld")) {
         }
     }
     steps {
+        update<PythonBuildStep>(1) {
+            enabled = false
+            clearConditions()
+        }
         insert(2) {
             script {
                 name = "Run command inside Docker container"
