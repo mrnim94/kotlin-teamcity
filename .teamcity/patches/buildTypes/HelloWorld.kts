@@ -47,6 +47,7 @@ changeBuildType(RelativeId("HelloWorld")) {
         insert(2) {
             script {
                 name = "Run command inside Docker container"
+                enabled = false
                 scriptContent = "pwd"
                 dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
                 dockerPull = true
