@@ -1,7 +1,7 @@
 package _self.buildTypes
 
 import _self.vcsRoots.DockerDemo
-//import _self.vcsRoots.HomeTestTiki
+import _self.vcsRoots.HomeTestTiki
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.dockerSupport
 import jetbrains.buildServer.configs.kotlin.buildSteps.ScriptBuildStep
@@ -19,7 +19,7 @@ object EchoHelloWorld : BuildType ({
     }
 
     vcs {
-//        root(HomeTestTiki, "+:. => ./home-test-tiki")
+        root(HomeTestTiki, "+:. => ./home-test-tiki")
         root(DockerDemo, "+:. => ./docker-demo")
         root(DslContext.settingsRoot, "+:. => ./kotlin-teamcity")
     }
