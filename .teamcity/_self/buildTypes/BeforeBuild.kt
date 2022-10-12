@@ -4,8 +4,8 @@ import _self.vcsRoots.HomeTestTiki
 import jetbrains.buildServer.configs.kotlin.BuildType
 
 object BeforeBuild : BuildType({
-    id("HelloWorld")
-    name = "Hello world"
+    id("BeforeBuild")
+    name = "Before Build"
 
     vcs {
         root(HomeTestTiki, "+:. => ./home-test-tiki")
