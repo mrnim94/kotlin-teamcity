@@ -19,7 +19,7 @@ object EchoHelloWorld : BuildType ({
     }
 
     vcs {
-        root(HomeTestTiki, "+:. => ./home-test-tiki")
+//        root(HomeTestTiki, "+:. => ./home-test-tiki")
         root(DockerDemo, "+:. => ./docker-demo")
         root(DslContext.settingsRoot, "+:. => ./kotlin-teamcity")
     }
