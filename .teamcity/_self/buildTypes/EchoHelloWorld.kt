@@ -8,6 +8,8 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.ScriptBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
+// note
+
 object EchoHelloWorld : BuildType ({
     id("HelloWorld")
     name = "Hello world"
