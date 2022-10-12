@@ -65,4 +65,10 @@ object EchoHelloWorld : BuildType ({
             }
         }
     }
+
+    dependencies {
+        snapshot(BeforeBuild) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
 })
