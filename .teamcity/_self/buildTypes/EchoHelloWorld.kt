@@ -3,8 +3,10 @@ package _self.buildTypes
 import _self.vcsRoots.DockerDemo
 import _self.vcsRoots.HomeTestTiki
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.buildFeatures.dockerSupport
+import jetbrains.buildServer.configs.kotlin.buildSteps.ScriptBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
 object EchoHelloWorld : BuildType ({
     id("HelloWorld")
