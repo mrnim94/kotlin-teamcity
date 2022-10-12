@@ -24,9 +24,12 @@ object EchoHelloWorld : BuildType ({
 
     steps {
         script {
+            enabled = false
             scriptContent = """
                 echo 'Hello world!'
                 docker -v
+                
+                docker pull docker pull docker.nimtechnology.com/nim/gusaul/grpcox:latest
                 ls -la
                 pwd
                 echo 'Run python script'
@@ -38,8 +41,25 @@ object EchoHelloWorld : BuildType ({
         }
         python {
             name = "Run Python3 Script"
+            enabled = false
             command = file {
                 filename = "kotlin-teamcity/main.py"
+            }
+        }
+        script {
+            name = "Run command inside Docker container"
+            scriptContent = "ls -la"
+            dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
+            dockerPull = true
+            dockerImage = "docker.nimtechnology.com/nim/gusaul/grpcox:latest"
+        }
+    }
+
+    features {
+        dockerSupport {
+            cleanupPushedImages = true
+            loginToRegistry = on {
+                dockerRegistryId = "PROJECT_EXT_10"
             }
         }
     }
